@@ -1,0 +1,153 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body{
+  height: 100vh;
+  background: url('../assets/back.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/*load*/
+
+.loading-1{
+  display: flex;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.loading-1.is-active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*load end*/
+
+canvas{
+  position: absolute;
+}
+
+#container{
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.titlebox{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  top: 8em;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@font-face {
+  font-family: ailerons;
+  src: url(../assets/Ailerons-Typeface.woff)format("woff");
+}
+
+@font-face {
+  font-family: galactico;
+  src: url(../assets/Galactico-Basic.woff)format("woff");
+}
+
+#head{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 6rem;/*8rem*/
+  font-family: 'galactico', sans-serif;
+  animation: type 1.5s steps(20, end);
+  overflow: hidden;
+  width: 100%;
+  font-display: block;
+}
+
+@keyframes type{
+  from {width: 0;}
+}
+
+#description{
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'galactico', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  animation: type 2s steps(20, end);
+  overflow: hidden;
+  width: 85%; /*65%*/
+  font-display: block;
+}
+
+.copyright{
+  display: flex;
+  position: absolute;
+  bottom: 0.5em;
+  color: black;
+  font-size: 0.8rem;
+}
+
+.btnbox{
+  display: flex;
+  position: absolute;
+  bottom: 35%;
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 0.6em;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#btn{
+  width: 100%;
+  border: none;
+  background: rgba(255, 255, 255, 0.2) url(../assets/fingerprint.svg);
+  background-size: 3.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  -webkit-tap-highlight-color: transparent;
+}
+
+#btn:hover{
+  cursor: pointer;
+}
