@@ -64,7 +64,12 @@ body{
 /*load end*/
 
 canvas{
-  position: absolute;
+  position: relative;
+}
+
+#particles-js{
+  display: flex;
+  width: 100%;
 }
 
 #container{
