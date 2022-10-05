@@ -139,7 +139,7 @@ canvas{
   margin-left: 0.6em;
   /*adding backdrop-filter: blur(); cause a glitch doesn't happen locally only remote*/
   -webkit-tap-highlight-color: transparent;
-  animation: pulse 3s ease-out infinite;
+  animation: pulse 3s steps(60,end) infinite;
 }
 
 @keyframes pulse {
