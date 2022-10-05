@@ -38,11 +38,12 @@ window.onload = () => {
 
     anchor.addEventListener('click', e => {
       e.preventDefault();
+      let target = e.target.href;
 
       transition_el.classList.add('is-active');
 
       setInterval(() => {
-        window.location.href= './home.html';
+        window.location.href= 'target';
       }, 350);
     })
   }
