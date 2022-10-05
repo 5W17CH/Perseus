@@ -64,13 +64,9 @@ body{
 /*load end*/
 
 canvas{
-  position: relative;
+  position: absolute;
 }
 
-#particles-js{
-  display: flex;
-  width: 100%;
-}
 
 #container{
   display: flex;
@@ -138,6 +134,7 @@ canvas{
   height: 4em;
   width: 4em;
   border-radius: 50%;
+  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
   overflow: hidden;
   margin-left: 0.6em;
   -webkit-tap-highlight-color: transparent;
@@ -150,8 +147,7 @@ canvas{
   background-size: 3.5em;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(1px);
+  filter: blur(0.4px);
   -webkit-tap-highlight-color: transparent;
 }
 
