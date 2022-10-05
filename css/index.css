@@ -102,7 +102,6 @@ canvas{
   background-size: 3em;
   background-repeat: no-repeat;
   background-position: center;
-  filter: blur(0.4px);
   -webkit-tap-highlight-color: transparent;
 }
 
