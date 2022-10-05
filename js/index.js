@@ -43,7 +43,7 @@ window.onload = () => {
       transition_el.classList.add('is-active');
 
       setInterval(() => {
-        window.location.href = target;
+        window.location.replace = target;
       }, 350);
     })
   }
