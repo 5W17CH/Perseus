@@ -26,7 +26,7 @@ function loop() {
 setInterval(loop, 6000);
 
 window.onload = () => {
-  const anchors = document.querySelectorAll('a');
+  const anchors = document.getElementById('btn');
   const transition_el = document.querySelector('.loading');
 
   setTimeout(() => {
@@ -43,7 +43,7 @@ window.onload = () => {
       transition_el.classList.add('is-active');
 
       setInterval(() => {
-        window.location.href= 'target';
+        window.location.href= target;
       }, 350);
     })
   }
