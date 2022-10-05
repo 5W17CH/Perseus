@@ -40,7 +40,7 @@ function addLoad() {
   transition_el.classList.add('is-active');
   setTimeout(() => {
     transition_el.classList.remove('is-active');
-  }, 600);
+  }, 1000);
 };
 
 function delay (URL) {
