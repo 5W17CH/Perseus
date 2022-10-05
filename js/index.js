@@ -33,12 +33,10 @@ function fadeOut() {
 function fadeIn() {
   document.getElementById('loadingOut').style.zIndex = '1';
   document.getElementById('loadingOut').style.opacity = '1';
-  setInterval(() => {
-    document.getElementById('loadingOut').style.zIndex = '0';
-    document.getElementById('loadingOut').style.opacity = '0';
-  }, 500);
 }
 
 function delay (URL) {
   setTimeout( function() { window.location = URL }, 500 );
+  document.getElementById('loadingOut').style.zIndex = '0';
+  document.getElementById('loadingOut').style.opacity = '0';
 }
