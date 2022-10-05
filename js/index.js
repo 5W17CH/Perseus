@@ -38,14 +38,13 @@ window.onload = () => {
 
 function addLoad() {
   transition_el.classList.add('is-active');
+  setTimeout(() => {
+    transition_el.classList.remove('is-active');
+  }, 499);
 };
 
 function delay (URL) {
   setTimeout( function() { window.location = URL }, 500 );
 };
 
-const [entry] = performance.getEntriesByType("navigation");
-
-if (entry["type"] === "back_forward") {
-  location.reload();
-};
+window.on
