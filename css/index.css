@@ -13,7 +13,7 @@ body{
 
 /*load*/
 
-.loading-1{
+#loading{
   display: flex;
   position: fixed;
   background-color: black;
@@ -21,17 +21,27 @@ body{
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 101;
+  z-index: 1;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0.5s;
+  justify-content: center;
+  align-items: center;
+}
+
+#loadingOut{
+  display: flex;
+  position: fixed;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
   opacity: 0;
   transition: 0.3s ease-in-out;
   justify-content: center;
   align-items: center;
-  pointer-events: none;
-}
-
-.loading-1.is-active{
-  opacity: 1;
-  pointer-events: all;
 }
 
 .lds-dual-ring {
@@ -152,7 +162,7 @@ canvas{
   width: 100%;
   border: none;
   background: rgba(255, 255, 255, 0.2) url(../assets/fingerprint.svg);
-  background-size: 3.5em;
+  background-size: 3em;
   background-repeat: no-repeat;
   background-position: center;
   filter: blur(0.4px);

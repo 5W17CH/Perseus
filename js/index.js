@@ -25,26 +25,16 @@ function loop() {
 };
 setInterval(loop, 6000);
 
-window.onload = () => {
-  const anchors = document.getElementById('btn');
-  const transition_el = document.querySelector('.loading');
+function fadeOut() {
+  document.getElementById('loading').style.opacity = '0';
+  document.getElementById('loading').style.zIndex = '0';
+};
 
-  setTimeout(() => {
-    transition_el.classList.remove('is-active');
-  }, 500);
+function fadeIn() {
+  document.getElementById('loadingOut').style.zIndex = '1';
+  document.getElementById('loadingOut').style.opacity = '1';
+}
 
-  for (let i = 0; i < anchors.length; i++) {
-    const anchor = anchors[i];
-
-    anchor.addEventListener('click', e => {
-      e.preventDefault();
-      let target = e.target.href;
-
-      transition_el.classList.add('is-active');
-
-      setInterval(() => {
-        window.location.href= target;
-      }, 350);
-    })
-  }
+function delay (URL) {
+  setTimeout( function() { window.location = URL }, 500 );
 }

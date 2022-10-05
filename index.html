@@ -7,9 +7,10 @@
     <title>PerseusJDB</title>
     <link rel="icon" href="assets/favicon.png" type="image/icon type">
   </head>  
-    <body>
+    <body onload="fadeOut()">
 
-      <div class="loading loading-1 is-active"><div class="lds-dual-ring"></div></div>
+      <div id="loading"><div class="lds-dual-ring"></div></div>
+      <div id="loadingOut"><div class="lds-dual-ring"></div></div>
       
       <div id="particles-js"></div>
       <div id="container">
@@ -19,7 +20,7 @@
         </div>
         <div class="copyright">&#169; 2022 Gianni Pintus. All Rights Reserved.</div>
         <div class="btnbox">
-          <a href="home.html" id="btn"></a>
+          <a href="javascript:delay('home.html')"" id="btn" onclick="fadeIn()"></a>
         </div>
       </div>
 
