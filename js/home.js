@@ -1,7 +1,12 @@
 window.onload = () => {
-  const elem = document.querySelector('.loading');
+  const transition_el = document.querySelector('.loading');
 
   setTimeout(() => {
-    elem.classList.remove('is-active');
-  }, 350);
-};
+    transition_el.classList.remove('is-active');
+  }, 500);
+
+}
+
+function delay (URL) {
+  setTimeout( function() { window.location = URL }, 500 );
+}

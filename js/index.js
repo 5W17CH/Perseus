@@ -25,18 +25,21 @@ function loop() {
 };
 setInterval(loop, 6000);
 
-function fadeOut() {
-  document.getElementById('loading').style.opacity = '0';
-  document.getElementById('loading').style.zIndex = '0';
+const transition_el = document.querySelector('.loading');
+
+window.onload = () => {
+  const transition_el = document.querySelector('.loading');
+
+  setTimeout(() => {
+    transition_el.classList.remove('is-active');
+  }, 500);
+
 };
 
-function fadeIn() {
-  document.getElementById('loadingOut').style.zIndex = '1';
-  document.getElementById('loadingOut').style.opacity = '1';
+function addLoad() {
+  transition_el.classList.add('is-active');
 }
 
 function delay (URL) {
   setTimeout( function() { window.location = URL }, 500 );
-  document.getElementById('loadingOut').style.zIndex = '0';
-  document.getElementById('loadingOut').style.opacity = '0';
 }
