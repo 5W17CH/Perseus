@@ -18,8 +18,8 @@ body{
   height: 100vh;
   background: url(../assets/back.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  overflow: hidden;
 }
 
 canvas{
@@ -38,9 +38,10 @@ canvas{
   display: flex;
   position: absolute;
   bottom: 0.8%;
-  width: 0%;
-  height: 0%;
-  animation: Display 2s 1s forwards;
+  width: 0%;/*0*/
+  height: 0%;/*0*/
+  animation: Display 1.5s 0.8s forwards;
+  justify-content: center;
 }
 @keyframes Display{
   0%{
@@ -56,18 +57,16 @@ canvas{
   }
 }
 
-.imgbox{
+.titlebox{
+  font-family: ailerons, sans-serif;
   display: flex;
+  color: white;
+  flex-direction: column;
   position: absolute;
-  background: url(../assets/pic2.jpg);
-  background-size: cover;
-  border: solid 1px white;
   opacity: 0;
-  width: 95%;
-  height: 40%;
-  left: 2.5%;
-  top: 1%;
-  animation: box forwards 1s 3s;
+  animation: box forwards 1s 2.5s;
+  align-items: center;
+  margin-top: 1em;
 }
 @keyframes box{
   0%{
@@ -78,15 +77,49 @@ canvas{
   }
 }
 
-.textbox{
+.jumpsbox{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 22%;
+  width: 90%;
+  height: 70%;
+  opacity: 0;
+  align-items: center;
+  animation: box forwards 1s 3s;
+}
+
+.jump{
   font-family: galactico, sans-serif;
   display: flex;
-  position: absolute;
-  bottom: 2%;
-  left: 2.5%;
-  width: 95%;
-  height: 55%;
-  opacity: 0;
-  animation: box forwards 1s 3s;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 5px 2px rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 100%;
+  height: 18%;
+  margin-bottom: 2em;
+  overflow: hidden;
   color: white;
+}
+
+p{
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+}
+
+.btnbox{
+  display: flex;
+  position: absolute;
+  right: 0.5em;
+  margin-top: 0.5em;
+}
+
+.fingerprint{
+  height: 60px;
+  width: 60px;
+  background: url(../assets/fingerprint.svg);
+  background-size: 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 }
