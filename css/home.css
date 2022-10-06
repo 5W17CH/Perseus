@@ -3,11 +3,90 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: ailerons;
+  src: url(../assets/Ailerons-Typeface.woff)format("woff");
+}
+
+@font-face {
+  font-family: galactico;
+  src: url(../assets/Galactico-Basic.woff)format("woff");
+}
+
 html,
 body{
   height: 100vh;
-  background: url('../assets/back.jpg');
+  background: url(../assets/back.jpg);
   background-size: cover;
   background-position: center;
   overflow: hidden;
+}
+
+canvas{
+  position: absolute;
+}
+
+.container{
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainbox{
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  position: absolute;
+  bottom: 0.8%;
+  width: 0%;
+  height: 0%;
+  animation: Display 2s 1s forwards;
+}
+@keyframes Display{
+  0%{
+    width: 0%;
+  }
+  50%{
+    width: 98%;
+    height: 1%;
+  }
+  100%{
+    width: 98%;
+    height: 98%;
+  }
+}
+
+.imgbox{
+  display: flex;
+  position: absolute;
+  background: url(../assets/pic2.jpg);
+  background-size: cover;
+  border: solid 1px white;
+  opacity: 0;
+  width: 95%;
+  height: 40%;
+  left: 2.5%;
+  top: 1%;
+  animation: box forwards 1s 3s;
+}
+@keyframes box{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.textbox{
+  font-family: galactico, sans-serif;
+  display: flex;
+  position: absolute;
+  bottom: 2%;
+  left: 2.5%;
+  width: 95%;
+  height: 55%;
+  opacity: 0;
+  animation: box forwards 1s 3s;
+  color: white;
 }
