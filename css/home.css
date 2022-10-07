@@ -91,6 +91,7 @@ canvas{
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   animation: box forwards 1s 3s;
+  scrollbar-width: none;
 }
 .jumpsbox::-webkit-scrollbar{
   display: none;
