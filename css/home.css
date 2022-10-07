@@ -20,6 +20,7 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden;
 }
 
 canvas{
@@ -81,45 +82,34 @@ canvas{
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 22%;
-  width: 90%;
-  height: 70%;
-  opacity: 0;
+  top: 30%;
+  width: 20em;
+  height: 20em;
+  opacity: 0;/*0*/
   align-items: center;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
   animation: box forwards 1s 3s;
 }
-
-.jump{
-  font-family: galactico, sans-serif;
-  display: flex;
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 5px 2px rgb(255, 255, 255);
-  border-radius: 5px;
-  width: 100%;
-  height: 18%;
-  margin-bottom: 2em;
-  overflow: hidden;
-  color: white;
+.jumpsbox::-webkit-scrollbar{
+  display: none;
 }
 
 p{
-  margin-top: 0.5em;
+  font-family: galactico;
   margin-left: 0.5em;
-}
-
-.btnbox{
-  display: flex;
-  position: absolute;
-  right: 0.5em;
   margin-top: 0.5em;
 }
 
-.fingerprint{
-  height: 60px;
-  width: 60px;
-  background: url(../assets/fingerprint.svg);
-  background-size: 45px;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
+.jump{
+  display: flex;
+  border-radius: 5px;
+  color: white;
+  min-height: 10em;
+  min-width: 18em;
+  margin-bottom: 2em;
+  margin-top: 1em;
+  scroll-snap-align: center;
+  box-shadow: inset 0 40px 30px 0 rgba(0, 0, 0, 0.8);
 }
