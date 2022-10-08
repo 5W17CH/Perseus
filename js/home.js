@@ -61,3 +61,5 @@ function CloseJumpInfo() {
   ShowInfo.classList.add('close');
   ShowInfo.classList.remove('active')
 }
+
+//v1.0
