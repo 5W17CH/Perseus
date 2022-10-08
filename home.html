@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/transition.css">
     <link rel="stylesheet" href="./css/cardEffect.css">
+    <link rel="stylesheet" href="./css/infoCards.css">
     <title>PerseusJDB</title>
     <link rel="icon" href="./assets/favicon.png" type="image/icon type">
   </head>
@@ -22,19 +23,26 @@
         </div>
         <div class="jumpsbox">
 
-          <div class="jump" style="background: url(./assets/pic1.jpg); background-size: cover;">
+          <div class="jump" onmouseup="Planet()"
+          style="background: url(./assets/pic1.jpg); background-size: cover;">
             <p>1°Planet</p>
             <div class="lds-ripple"><div></div><div></div></div>
           </div>
-          <div class="jump" style="background: url(./assets/pic2.jpg); background-size: cover;">
+
+          <div class="jump" onmouseup="Planet()"
+          style="background: url(./assets/pic2.jpg); background-size: cover;">
             <p>2°Planet</p>
             <div class="lds-ripple"><div></div><div></div></div>
           </div>
-          <div class="jump" style="background: url(./assets/pic3.jpg); background-size: cover;">
+
+          <div class="jump" onmouseup="Planet()"
+          style="background: url(./assets/pic3.jpg); background-size: cover;">
             <p>3°Planet</p>
             <div class="lds-ripple"><div></div><div></div></div>
           </div>
-          <div class="jump" style="background: url(./assets/pic4.jpg); background-size: cover;">
+
+          <div class="jump" onmouseup="Planet()"
+          style="background: url(./assets/pic4.jpg); background-size: cover;">
             <p>4°Planet</p>
             <div class="lds-ripple"><div></div><div></div></div>
           </div>
@@ -44,6 +52,18 @@
       </div>
     </div>
 
+    <div class="showInfo active">
+      <div id="infoContainer">
+        <div class="infoImg1"></div>
+        <div class="infoText1">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis eius deserunt quo, <br><br>
+          impedit necessitatibus velit dolorum! Incidunt odit laboriosam porro illo ratione optio, <br>
+          facilis, obcaecati, esse maiores provident mollitia molestiae nesciunt voluptatum quibusdam <br><br>
+          ullam voluptates nobis eum voluptatibus placeat explicabo voluptate dolorum nemo corrupti. <br>
+          Accusantium ea esse sed nihil exercitationem.
+        </div>
+      </div>
+    </div>
 
     <script src="assets/particles.js"></script>
     <script src="assets/app.js"></script>
