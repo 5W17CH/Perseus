@@ -27,7 +27,7 @@
 }
 
 .showInfo.close{
-  animation: infoclose 2s backwards;
+  animation: infoclose 2.5s backwards;
 }
 @keyframes infoclose{
   0%{
@@ -77,4 +77,47 @@
 }
 #infoText1::-webkit-scrollbar{
   display: none;
+}
+
+@media screen and (min-width: 850px){
+  .showInfo{
+    top: 23%;
+    left: 22em;
+    right: 2em;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  @keyframes info{
+    0%{
+      width: 0%;
+    }
+    50%{
+      width: auto;
+      height: 1%;
+    }
+    100%{
+      width: auto;
+      height: 73%;
+    }
+  }
+
+  @keyframes infoclose{
+    0%{
+      width: auto;
+      height: 100%;
+    }
+    100%{
+      width: auto;
+      height: 0%;
+    }
+  }
+
+  #infoImg1{
+    width: 40em;
+    height: 20em;
+  }
+
+  #infoText1{
+    width: 60em;
+    height: 10em;
+  }
 }
