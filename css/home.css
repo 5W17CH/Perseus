@@ -87,6 +87,7 @@ canvas{
   height: 20em;
   opacity: 0;/*0*/
   align-items: center;
+  -webkit-overflow-scrolling: touch;
   overflow: scroll;
   scroll-snap-type: y mandatory;
   animation: box forwards 1s 3s;
